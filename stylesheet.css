@@ -9,8 +9,21 @@ body{
     min-height: 100%;
 }
 
+.header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.header p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .ad{
     padding: 8px;
+    background-color: red;
 }
 
 .ad,
@@ -41,7 +54,7 @@ body{
 
 .content p{
     display: flex;
-    margin: 16px 0;
+    margin: 40px 0;
     height: 50px;
     padding: 300px 50px;
     justify-content: center;
