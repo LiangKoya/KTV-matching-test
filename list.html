@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List_top</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="list_page">
+        <div class="header">
+            <p class="ad">AD</p>
+        </div>
+        <div class="content">
+            <div class="candidate">
+                <div class="icon">icon</div>
+                <div class="center">
+                    <div class="new">NEW</div>
+                    <div class="f_name">123456789abcfefg</div>
+                </div>
+                <div class="date">yyyy/mm/dd</div>
+            </div>
+            <div class="candidate">
+                <div class="icon">pic</div>
+                <div class="center">
+                    <div class="new"></div>
+                    <div class="f_name">123456789abcfefg</div>
+                </div>
+                <div class="date">yyyy/mm/dd</div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer">
+                <div class="menu">
+                    <a class="main" href="index.html">main page</a>
+                    <p class="list">list</p>
+                    <a class="DM" href="df.html">DM</a>
+                    <a class="my_page" href="my_page.html">my page</a>
+                </div>
+                <p class="ad">AD</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<style>
+    .content{
+        gap: 8px;
+    }
+
+    .candidate{
+        width: 100%;
+        outline: auto;
+        display: flex;
+        align-items: center;
+        padding: 8px 0;
+    }
+
+    .icon{
+        height: 50px;
+        width: 50px;
+        outline: auto;
+        margin-left: 8px;
+    }
+
+    .center{
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+    }
+
+    .new{
+        outline: auto;
+        width: 60px;
+        font-size: 12px;
+        background-color: red;
+        color: white; 
+    }
+
+    .f_name{
+        font-size: 24px;
+    }
+
+    .date{
+        margin-left: auto;
+        margin-right: 8px;
+    }
+</style>
+</html>

@@ -13,16 +13,16 @@
         </div>
         <div class="content">
             <p>news1</p>
-            <p>news2</p>
+            <p id="news2">news2</p>
             <p>news3</p>
         </div>
         <div class="footer-container">
             <div class="footer">
                 <div class="menu">
                     <p class="main">main page</p>
-                    <p class="list">list</p>
-                    <p class="DM">DM</p>
-                    <p class="my_page">my page</p>
+                    <a class="list" href="list.html">list</a>
+                    <a class="DM" href="df.html">DM</a>
+                    <a class="my_page" href="my_page.html">my page</a>
                 </div>
                 <p class="ad">AD</p>
             </div>
@@ -30,4 +30,23 @@
     </div>
     
 </body>
+<style>
+    .content p{
+        outline: auto;
+        width: 130px;
+        margin: 0;
+    }
+
+    .content p{
+        display: flex;
+        height: 50px;
+        padding: 300px 50px;
+        justify-content: center;
+        align-items: center;
+        }
+
+    #news2{
+        margin: 40px 0;
+    }
+</style>
 </html>
