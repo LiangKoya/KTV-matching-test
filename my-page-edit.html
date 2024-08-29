@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my page edit</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="my-page-edit">
+        <div class="header">
+            <p class="ad">AD</p>
+            <div class="top">
+                <button class="back">back</button>
+                <button class="save">save</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="info">
+                <ul>
+                    <li class="age">age?: 25</li>
+                    <li class="occupation">occupation?: student</li>
+                    <li class="zodiac">zodiac?: sagittarius</li>
+                    <li class="ammount">How many ppl?: 6 ppl</li>
+                    <li class="confidence">confidence?: not bad</li>
+                </ul>
+            </div>
+            <div class="detail_info">
+                <div class="artist">
+                    <div class="title-container">
+                        <!-- <div class="title">artist?<button class="add-btn">add</button></div> -->
+                        <div class="title">artist?<input><button data-index="0">add</button></div>
+                    </div>
+                    <ul>
+                        <!-- <li class="default">singersinger</li> -->
+                    </ul>
+                </div>
+                <div class="music">
+                    <div class="title">music?<input><button data-index="1">add</button></div>
+                    <ul>
+                        <!-- <li>musicmusic</li> -->
+                    </ul>
+                </div>
+                <div class="store">
+                    <div class="title">store?<input><button data-index="2">add</button></div>
+                    <ul>
+                        <!-- <li>chunK</li> -->
+                    </ul>
+                </div>
+                <div class="place">
+                    <div class="title">place?<input><button data-index="3">add</button></div>
+                    <ul>
+                        <!-- <li>haidian</li> -->
+                    </ul>
+                </div>
+                <div class="days">
+                    <div class="title">days?<input><button data-index="4">add</button></div>
+                    <ul>
+                        <!-- <li>weekends</li> -->
+                    </ul>
+                </div>
+                <div class="time">
+                    <div class="title">time?<input><button data-index="5">add</button></div>
+                    <ul>
+                        <!-- <li>night</li> -->
+                    </ul>
+                </div>
+                <div class="comment">
+                    <div class="title">comment?<input><button data-index="6">add</button></div>
+                    <p>free comment. free comment.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            <div class="footer">
+                <div class="menu">
+                    <a class="main" href="index.html">main page</a>
+                    <a class="list" href="list.html">list</a>
+                    <a class="DM" href="df.html">DM</a>
+                    <p class="my_page">my page</p>
+                </div>
+                <p class="ad">AD</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<style>
+    .my-page-edit{display: flex; flex-direction: column;}
+    .top{width: 100%; display: flex; justify-content: space-between; margin-top: 4px;}
+    .back,.save{border: solid 1px black;}
+
+    /* .title-container{display: flex;} */
+    ul{min-height: 20px; width: 100%; margin: 2px; padding: 0px; padding-left: 16px;}
+    .detail_info li{width: fit-content;}
+    .artist,.music,.store,.place,.days,.time,.comment{width: 100%; border: 2px solid black;}
+    input{margin: 4px;}
+    .title{width: 0%; display: flex;}
+    
+</style>
+<script>
+    // btn = document.querySelector(".artist button");
+    // console.log(btn.className);
+</script>
+<script src="myPage.js"></script>
+</html>

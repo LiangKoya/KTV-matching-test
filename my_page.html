@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page_top</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="my-page">
+        <div class="header">
+            <p class="ad">AD</p>
+        </div>
+        <div class="content">
+            <div class="top">
+                <div class="icon">icon</div>
+                <div class="center">
+                    <div class="gender">male</div>
+                    <div class="user_name">Ryosuke Koyanaka</div>
+                </div>
+                <button class="edit">edit</button>
+            </div>
+            <div class="info">
+                <div class="age">25/</div>
+                <div class="occupation">student/</div>
+                <div class="zodiac">sagittarius/</div>
+                <div class="ammount">6 ppl/</div>
+                <div class="confidence">not bad</div>
+            </div>
+            <div class="detail_info">
+                <div class="artist">
+                    <div class="title">artist</div>
+                    <ul>
+                        <!-- <li>singersinger</li> -->
+                    </ul>
+                </div>
+                <div class="music">
+                    <div class="title">music</div>
+                    <ul>
+                        <!-- <li>musicmusic</li> -->
+                    </ul>
+                </div>
+                <div class="store">
+                    <div class="title">store</div>
+                    <ul>
+                        <!-- <li>chunK</li> -->
+                    </ul>
+                </div>
+                <div class="place">
+                    <div class="title">place</div>
+                    <ul>
+                        <!-- <li>haidian</li> -->
+                    </ul>
+                </div>
+                <div class="days">
+                    <div class="title">days</div>
+                    <ul>
+                        <!-- <li>weekends</li> -->
+                    </ul>
+                </div>
+                <div class="time">
+                    <div class="title">time</div>
+                    <ul>
+                        <!-- <li>night</li> -->
+                    </ul>
+                </div>
+                <div class="comment">
+                    <div class="title">comment</div>
+                    <p>free comment. free comment.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-container">
+            <div class="footer">
+                <div class="menu">
+                    <a class="main" href="index.html">main page</a>
+                    <a class="list" href="list.html">list</a>
+                    <a class="DM" href="df.html">DM</a>
+                    <p class="my_page">my page</p>
+                </div>
+                <p class="ad">AD</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<style>
+    .my-page{display: flex; flex-direction: column;}
+    .top{display: flex; justify-content: space-between; align-items: baseline; width: 100%;}
+    .icon{height: 50px; width: 50px; outline: auto; margin-left: 8px;}
+    .center{display: flex; flex-direction: column; align-items: start;}
+    .user_name{font-size: 32px; display: flex; height: 32px;}
+    .gender{height: 16px;}
+    .edit{margin-right: 8px; border: solid 1px black;}
+
+    .info{display: flex; margin: 8px 0;}
+
+    .detail_info{display: flex; flex-direction: column; align-items: start; width: 80%;}
+    .artist,.music,.store,.place,.days,.time,.comment{width: 100%; border: 2px solid black;}
+    .title{width: 0%;}
+
+    ul{min-height: 20px; width: 100%; margin: 2px;  padding: 0px; padding-left: 16px;}
+    li{width: fit-content;}
+    p{margin: 2px; border: 1px solid black;}
+    
+</style>
+<script>
+    let editBtn = document.querySelector(".edit");
+    editBtn.addEventListener("click",()=>{
+        saveDataToStorageFromDisp()
+        window.location.href="my-page-edit.html"
+    })
+
+    function saveDataToStorageFromDisp(){
+        let storage = sessionStorage;
+        storage.clear()
+        let uls = document.querySelectorAll("ul")
+        for (let i=0;i<uls.length;i++){
+            let ul = uls[i]
+            let lis = ul.querySelectorAll("li")
+            for (let I=0;I<lis.length;I++){
+                storage.setItem(i+"-"+I,lis[I].textContent)
+        }
+    }
+    }
+
+    document.addEventListener("DOMContentLoaded",()=>{
+        let storage = sessionStorage;
+        for (let i=0;i<storage.length;i++){
+            let uls = document.querySelectorAll("ul")
+            let strContent = 0;
+            for (let I=0;;I++){
+                let li = document.createElement("li");
+                let strContent = storage.getItem(i+"-"+I);
+                if (!strContent){
+                    break;
+                }
+                else{
+                    li.textContent = strContent;
+                    uls[i].appendChild(li);
+                }
+            }
+        }
+    
+    })
+    
+</script>
+<!-- <script src="myPage.js"></script> -->
+</html>

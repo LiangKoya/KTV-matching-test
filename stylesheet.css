@@ -1,51 +1,20 @@
-html{
-    width: 100%;
-}
+html{width: 100%;}
 
-body{
-    margin: 0;
-    height: 100vh;
-    width: 100%;
-}
+body{margin: 0; height: 100vh; width: 100%;}
 
-.main-page{
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
+.main-page{display: flex; flex-direction: column; min-height: 100%;}
 
-.header{
-    position: fixed;
-    top: 0px;
-    width: 100%;
-}
+.header{position: fixed; top: 0px; width: 100%;}
 
-.header p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.header p{display: flex; justify-content: center; align-items: center;}
 
-.ad{
-    padding: 8px;
-    background-color: red;
-}
+.ad{padding: 8px; background-color: red;}
 
 .ad,
-.content{
-    text-align: center;
-}
+.content{text-align: center;}
 
 
-.header .ad{
-    outline: auto;
-    margin: 0;
-}
-
-/* .content p{
-    outline: auto;
-    width: 130px;
-}*/
+.header .ad{outline: auto; margin: 0;}
 
 .content{
     width: 100%;
@@ -57,50 +26,20 @@ body{
     margin-bottom: 124px;
 }
 
-/* .content p{
-    display: flex;
-    margin: 40px 0;
-    height: 50px;
-    padding: 300px 50px;
-    justify-content: center;
-    align-items: center;
-} */
+.footer-container{position: fixed; bottom: 0px; width: 100%;}
 
-.footer-container{
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-}
+.footer{display: flex; flex-direction: column; background-color:  rgb(36, 166, 218);}
 
-.footer{
-    display: flex;
-    flex-direction: column;
-    background-color:  rgb(36, 166, 218);
-}
-
-.menu{
-    outline: auto;
-    display: flex;
-}
+.menu{outline: auto; display: flex;}
 
 .main,
 .list,
 .DM,
-.my_page{
-    display: flex;
-    margin: 0;
-    outline: auto;
-    padding: 16px 0;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    width: calc(100% / 4);
-    text-decoration: none;
-    color: white;
-}
+.my_page{display: flex; margin: 0; outline: auto; padding: 16px 0;
+    flex: 1; justify-content: center; align-items: center; width: calc(100% / 4);
+    text-decoration: none; color: white;}
 
-.footer .ad{
-    outline: auto;
-    margin: 0;
-}
+.footer .ad{outline: auto; margin: 0;}
+
+.artist,.music,.store,.place,.days,.time,.comment{width: 100%;margin: 16px 0;}
 
